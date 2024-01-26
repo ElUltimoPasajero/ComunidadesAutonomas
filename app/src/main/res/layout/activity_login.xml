@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.LoginActivity">
+
+    <androidx.constraintlayout.motion.widget.MotionLayout
+        android:id="@+id/motionLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:translationZ="100dp"
+        app:layoutDescription="@xml/activity_login_scene"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/tvSpain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:width="50dp"
+            android:height="50dp"
+            android:background="@drawable/spain"
+            android:text=""
+            app:layoutDescription="@xml/activity_login_scene"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.609"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.342" />
+
+    </androidx.constraintlayout.motion.widget.MotionLayout>
+
+    <TextView
+        android:id="@+id/tvComunidadesLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Comunidades"
+        android:textSize="24dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/editNombreLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="E-mail"
+        android:inputType="text"
+        app:helperText="E-Mail"
+        app:helperTextTextColor="@color/black"
+        android:autofillHints="Email Adress"
+        app:layout_constraintEnd_toEndOf="@id/tvComunidadesLogin"
+        app:layout_constraintStart_toStartOf="@id/tvComunidadesLogin"
+        app:layout_constraintTop_toBottomOf="@id/tvComunidadesLogin"
+        android:layout_marginTop="100dp"
+         >
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/editPassLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Contraseña"
+        app:helperText="Contraseña"
+        app:passwordToggleEnabled="true"
+        app:helperTextTextColor="@color/black"
+        android:inputType="textPassword"
+        style="@style/Widget.Material3.TextInputLayout.FilledBox.Dense"
+        app:layout_constraintStart_toStartOf="@id/editNombreLogin"
+        app:layout_constraintEnd_toEndOf="@id/editNombreLogin"
+        app:layout_constraintTop_toBottomOf="@id/editNombreLogin"
+        android:layout_marginTop="35dp"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLine"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"/>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        app:layout_constraintTop_toBottomOf="@id/editPassLogin"
+        app:layout_constraintStart_toStartOf="@id/editPassLogin"
+        app:layout_constraintEnd_toEndOf="@id/editPassLogin"
+        android:layout_marginTop="35dp"/>
+
+    <Switch
+        android:id="@+id/stLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Recordar"
+        app:layout_constraintStart_toStartOf="@id/btnLogin"
+        app:layout_constraintEnd_toEndOf="@id/btnLogin"
+        app:layout_constraintTop_toBottomOf="@id/btnLogin"
+        android:layout_marginTop="35dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

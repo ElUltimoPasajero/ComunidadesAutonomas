@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Comunities</string>
+    <string name="textview">TextView</string>
+    <string name="cambiar">Cambiar</string>
+    <string name="txtbanderanuevo">txtBanderaNueva</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="comunidad">Comunidad</string>
+    <string name="recargar">Recargar</string>
+    <string name="limpiar">Limpiar</string>
+    <string name="recargar_por_defecto">Recargar</string>
+    <string name="email">Email</string>
+
+</resources>
