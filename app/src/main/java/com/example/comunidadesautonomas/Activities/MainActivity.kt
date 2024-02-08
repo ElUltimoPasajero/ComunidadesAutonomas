@@ -16,6 +16,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.comunidadesautonomas.RecyclerView.ComunityAdapter
 import com.example.comunidadesautonomas.Entities.Comunity
 import com.example.comunidadesautonomas.Entities.ComunityDAO
+import com.example.comunidadesautonomas.ImageActivity
 import com.example.comunidadesautonomas.R
 import com.example.comunidadesautonomas.databinding.ActivityMainBinding
 import com.google.android.material.snackbar.Snackbar
@@ -70,7 +71,6 @@ class MainActivity : AppCompatActivity() {
         comunityAdapter= ComunityAdapter(comunityList){
             comunity -> onItemSelected(comunity)
         }
-
 
         binding.rvComunities.layoutManager = LinearLayoutManager(this)
         binding.rvComunities.adapter = ComunityAdapter(comunityList) { comunity ->
@@ -284,9 +284,26 @@ class MainActivity : AppCompatActivity() {
 
             }
 
-        }
+            2 ->{
+                val intent = Intent(this, PhotoActivity::class.java)
+                intent.putExtra("id",comunityAfected.id)
+                this.startActivity(intent)
 
+            }
+
+            3->{
+                val intent = Intent(this,ImageActivity::class.java)
+                intent.putExtra("id", comunityAfected.id)
+                this.startActivity(intent)
+            }
+            else -> return super.onContextItemSelected(item)
+
+
+        }
         return true
+
+
+
     }
 
 

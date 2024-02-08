@@ -46,6 +46,8 @@ class ComunityViewHolder(view: View): ViewHolder(view), View.OnCreateContextMenu
 
         menu.add(this.adapterPosition,0,0,"Eliminar")
         menu.add(this.adapterPosition,1,1,"Editar")
+        menu.add(this.adapterPosition,2,2,"Hacer Foto")
+        menu.add(this.adapterPosition,3,3,"Ver Foto")
 
     }
 

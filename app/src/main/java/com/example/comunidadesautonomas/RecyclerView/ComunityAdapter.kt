@@ -13,11 +13,8 @@ import com.example.comunidadesautonomas.R
  *Recibe la lista de objetos y implementaesta interfaz recycler
  */
 
-class ComunityAdapter(
-    private var comunitiesList: List<Comunity>,
-    private val onClickListener: (Comunity) -> Unit
+class ComunityAdapter(private var comunitiesList: List<Comunity>, private val onClickListener: (Comunity) -> Unit
 ) : RecyclerView.Adapter<ComunityViewHolder>() {
-    //Recibe un OnClickListener con una lambda para que cada vez que cliques en una comunidad haga lo que sea
 
 
     fun updateList(newList: List<Comunity>){

@@ -33,14 +33,17 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
-    viewBinding{
-        enable=true
+    viewBinding {
+        enable = true
     }
 }
 
 dependencies {
-
-    implementation ("org.osmdroid:osmdroid-android:6.1.17")
+    implementation("io.coil-kt:coil:2.5.0")
+    implementation("androidx.camera:camera-camera2:1.3.0")
+    implementation("androidx.camera:camera-lifecycle:1.3.0")
+    implementation("androidx.camera:camera-view:1.3.0")
+    implementation("org.osmdroid:osmdroid-android:6.1.17")
     implementation("com.squareup.picasso:picasso:2.71828")
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.appcompat:appcompat:1.6.1")

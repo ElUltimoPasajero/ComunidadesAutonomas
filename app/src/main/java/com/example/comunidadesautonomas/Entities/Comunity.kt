@@ -5,13 +5,16 @@ package com.example.comunidadesautonomas.Entities
  */
 
 data class Comunity(
+    val id: Int,
     val flag: Int,
     var name: String,
     var capital: String,
     var inhabitants: Int,
     var latitude: Double,
     var longitude: Double,
-    val icon: Int
+    var icon: Int,
+    var uri: String
+
 ) {
 
 

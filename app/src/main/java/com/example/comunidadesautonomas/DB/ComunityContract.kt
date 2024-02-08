@@ -21,6 +21,7 @@ class ComunityContract {
                 const val COLUMN_LATITUDE = "latitud"
                 const val COLUMN_LONGITUDE = "longitud"
                 const val COLUMN_ICON = "icono"
+                const val COLUMN_URI ="uri"
 
 
             }
